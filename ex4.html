@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation & variable</title>
+</head>
+<style>
+    body {
+        margin: 0%;
+        background-color: rgb(200, 200, 200);
+    }
+    
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .drop {
+        opacity: 0;
+        padding: 20px;
+        animation-duration: 5s;
+        animation-name: drop;
+        animation-delay: var(--order);
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+    }
+    
+    @keyframes drop {
+        from {
+            opacity: 1;
+            margin-top: -30px;
+        }
+        to {
+            opacity: 1;
+            margin-top: 30%;
+        }
+    }
+</style>
+<body>
+    <div class="wrapper">
+        <span class="drop" style="--order: 0s;">🥳</span>
+        <span class="drop" style="--order: 1s;"> 😜</span>
+        <span class="drop" style="--order: 2s;">🤩</span>
+    </div>
+</body>
+</html>

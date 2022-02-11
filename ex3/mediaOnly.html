@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+</head>
+<style>
+    body{
+        margin: 0px;
+        font-size: 1rem;
+    }
+    .wrapper {
+        background-color: rgba(128, 128, 128, 0.7);
+        height: 100vh;
+    }
+    .content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 90vh;
+        background-color: white;
+    }
+    .big {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 180px;
+        height: 50px;
+        font-size: 2rem;
+        color: white;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 50px;
+        background-color: green;           
+    }
+    .small {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 120px;
+        height: 30px;
+        font-size: 1rem;
+        color: white;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 30px;
+        background-color: red;     
+    }
+            /*small*/
+    @media only screen and (max-width: 426px){
+        .big{
+            display: none;
+        }
+        .content{
+            width: 95vw;
+        }
+    }
+    @media only screen and (min-width: 426px){
+        .small{
+            display: none;
+        }
+        .content{
+            width: 80vw;
+        }
+    }
+</style>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <span class="small">I'm SMALL😥</span>
+            <span class="big">I'm BIG 😱</span>
+        </div>
+    </div>
+</body>
+</html>

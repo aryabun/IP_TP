@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centering div in a container</title>
+</head>
+<style>
+    .wrapper {
+        width: 400px;
+        height: 400px;
+        position: fixed;
+        background-color: rgba(128, 128, 128, 0.7);
+    }
+    
+    .flying-box {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 160px;
+        height: 50px;
+        border-radius: 2px;
+        background-color: rgb(245, 72, 72);
+        color: white;
+        vertical-align: middle;
+        text-align: center;
+        line-height: 50px;
+    }
+</style>
+<body>
+    <div class="wrapper">
+        <div class="flying-box">
+            I'm really in the Center 😂
+        </div>
+    </div>
+</body>
+</html>
